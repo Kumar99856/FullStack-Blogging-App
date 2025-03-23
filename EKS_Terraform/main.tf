@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "us-east-1"
+  region = "us-east-2"
 }
 
 resource "aws_vpc" "devopsshack_vpc" {
@@ -99,8 +99,8 @@ resource "aws_eks_cluster" "devopsshack" {
 resource "aws_eks_node_group" "Multi-Tier-Devops" {
   cluster_name    = aws_eks_cluster.Multi-Tier-Devops.name
   node_group_name = "Multi-Tier-Devops-node-group"
-  node_role_arn   = aws_iam_role.devopsshack_node_group_role.arn
-  subnet_ids      = aws_subnet.devopsshack_subnet[*].id
+  node_role_arn   = aws_iam_role.Multi-Tier-Devops_node_group_role.arn
+  subnet_ids      = aws_subnet.devopsshac_subnet[*].id
 
   scaling_config {
     desired_size = 3
