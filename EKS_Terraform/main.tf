@@ -96,9 +96,9 @@ resource "aws_eks_cluster" "devopsshack" {
   }
 }
 
-resource "aws_eks_node_group" "devopsshack" {
-  cluster_name    = aws_eks_cluster.devopsshack.name
-  node_group_name = "devopsshack-node-group"
+resource "aws_eks_node_group" "Multi-Tier-Devops" {
+  cluster_name    = aws_eks_cluster.Multi-Tier-Devops.name
+  node_group_name = "Multi-Tier-Devops-node-group"
   node_role_arn   = aws_iam_role.devopsshack_node_group_role.arn
   subnet_ids      = aws_subnet.devopsshack_subnet[*].id
 
