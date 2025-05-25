@@ -7,9 +7,9 @@ output "node_group_id" {
 }
 
 output "vpc_id" {
-  value = aws_vpc.devopsshack_vpc.id
+  value = aws_vpc.Multi-Tier-Devops_vpc.id
 }
 
 output "subnet_ids" {
-  value = aws_subnet.devopsshack_subnet[*].id
+  value = aws_subnet.Multi-Tier-Devops_subnet[*].id
 }
